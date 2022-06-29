@@ -1,8 +1,8 @@
 <?php
 // Database configuration
 $dbHost     = "localhost";
-$dbUsername = "image";
-$dbPassword = "image";
+$dbUsername = "anik";
+$dbPassword = "anik";
 $dbName     = "imageupload";
 
 // Create database connection

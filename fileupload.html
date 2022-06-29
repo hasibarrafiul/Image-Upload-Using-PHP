@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <title>Image Uploader</title>
 <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+  <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
+    <style>
+body {
+    background: #89a056;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p{
+    font-size: 7em;
+  }
+  input{
+    font-size: 2em;
+  }
+  
+  p, input {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: transparent;
+    background: url("https://wweb.dev/resources/creative-hover-effects/wave.svg") repeat-x #fff;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% 100%;
+    background-position-x: 0;
+    background-position-y: 2em;
+    -webkit-transition: background-position-y 0.6s ease;
+    transition: background-position-y 0.6s ease;
+    -webkit-animation: waveAnimation 4s infinite linear;
+    animation: waveAnimation 4s infinite linear;
+    animation-play-state: running;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  
+  p:hover {
+    background-position-x: 0;
+    background-position-y: 0;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+  }
+  
+  @keyframes waveAnimation{
+    from {
+      background-position-x: 0%;
+    }
+    to {
+      background-position-x: 200%;
+    }
+  }
+    div{
+        text-align:center;
+        padding: 100px;
+        border: 5px solid white;
+        border-radius: 15px 50px 30px;
+    }
+
+    
+      label{
+        cursor:pointer;
+      }
+      #imageName{
+        color:green;
+      }
+
+      button {
+        border-radius: 15px 50px 30px;
+        background: #ffffff;
+        padding: 10px;
+        width: 200px;
+        height: 60px;
+
+
+        font-size: 2em;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-decoration: none;
+        
+        position: relative;
+        color: transparent;
+        background-image: repeating-linear-gradient(45deg, #f1f1f1 0px, #f1f1f1 144px, gray 144px, gray 288px, #bebebe 288px, #bebebe 432px);
+        background-size: 250%;
+        background-position: 0%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-animation: stripeAnimation 3s linear infinite;
+        animation: stripeAnimation 3s linear infinite;
+        animation-play-state: running;
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+        }
+
+        button:hover {
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+        }
+
+        @keyframes stripeAnimation {
+        100% {
+            background-position: 165%;
+        }
+}
+  
+    </style>
 
 </head>
 <body>
     <div>
-        
-    </div>
+        <p>Upload Your Image Here</p>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file"/>
+            <button type="submit" name="submit" value="Upload" >Upload</button>
+          </form>
+      </div>
 
 </body>
 </html>

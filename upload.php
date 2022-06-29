@@ -33,5 +33,13 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 }
 
 // Display status message
-echo $statusMsg;
+
+echo "
+        <h1 style= text-align:center;>$statusMsg</h1>
+
+        <a href=fileupload.html> <h1 style= text-align:center;>Go To Home Page</h1> </a>
+
+        <a href=showimages.php> <h1 style= text-align:center;>Show Images</h1> </a>
+   
+    ";
 ?>
